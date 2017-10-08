@@ -9,7 +9,7 @@ public class ArmAttachment : VRTK_InteractableObject {
     public UnityEvent eventsOnAttach;
     public UnityEvent eventsOnDetach;
 
-    float detachLaunchSpeed = 250f;
+    float detachLaunchSpeed = 500f;
     
     protected void Start() {
     }
