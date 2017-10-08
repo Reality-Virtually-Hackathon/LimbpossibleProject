@@ -17,6 +17,8 @@ TagManager:
   - OtherSaucers
   - ArmAttachment
   - Web
+  - Fire
+  - Heart
   layers:
   - Default
   - TransparentFX

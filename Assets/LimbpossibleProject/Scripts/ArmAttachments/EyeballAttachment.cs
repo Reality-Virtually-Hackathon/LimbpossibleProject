@@ -8,12 +8,24 @@ public class EyeballAttachment : ArmAttachment {
     public MeshRenderer eyePlane;
     public bool launchesEye = false;
 
+    float rotationSpeed = 45f;
+
     Camera eyeCam;
     RenderTexture renderTexture;
+    Vector2 touchAxis;
+
+    float timeLastRotate;
 
     protected void Start() {
         base.Start();
         eyeCam = transform.Find("EyeCam").GetComponent<Camera>();
+        timeLastRotate = Time.time;
+    }
+
+    void Update() {
+        if(touchAxis != Vector2.zero) {
+            transform.Rotate(Vector3.up * touchAxis.x * rotationSpeed * Time.deltaTime);
+        }
     }
 
     public override void OnInteractableObjectGrabbed(InteractableObjectEventArgs e) {
@@ -29,17 +41,24 @@ public class EyeballAttachment : ArmAttachment {
             rb.isKinematic = false;
             rb.useGravity = true;
         }
+        e.interactingObject.GetComponent<EyeballTrackpadController>().eyeball = this;
         base.OnInteractableObjectUngrabbed(e);
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Web") {
             Rigidbody rb = this.GetComponent<Rigidbody>();
-            rb.useGravity = false;
+            Destroy(rb);
+
             WebObjectCatcher web = other.GetComponent<WebObjectCatcher>();
             this.transform.LookAt(web.pointingTowards.transform);
-            rb.isKinematic = true;
         }
+    }
+
+    public void SetTouchAxis(Vector2 data) {
+        touchAxis = data;
+        float delta = Time.time - timeLastRotate;
+        timeLastRotate = Time.time;
     }
 
 }

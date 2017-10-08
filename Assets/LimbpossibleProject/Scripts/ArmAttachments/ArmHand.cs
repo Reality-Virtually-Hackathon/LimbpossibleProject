@@ -58,7 +58,6 @@ public class ArmHand : ArmAttachment {
     {
         if(other.gameObject.layer == 9)
         {
-            Debug.Log("ENTERED TRIGGER");
             HasObjectInsideOfTrigger = true;
             GameObjectInsideOfTrigger = other.gameObject;
         }
@@ -85,8 +84,7 @@ public class ArmHand : ArmAttachment {
 
         }
 
-
-        Debug.Log("EXITED TRIGGER");
+        
 
     }
 

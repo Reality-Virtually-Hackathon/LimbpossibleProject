@@ -24,6 +24,9 @@ public class InsertHeartEffect : Singleton<InsertHeartEffect> {
     private PostProcessingProfile transitionProfile;
     private PostProcessingProfile futureProfile;
 
+    public GameObject HeartObject;
+    private bool HeartActivated = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -51,13 +54,33 @@ public class InsertHeartEffect : Singleton<InsertHeartEffect> {
 
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Transition(HeartTarget, 1f);
+            StartCoroutine(InsertHeart());
         }
+    }
 
-        if(Input.GetKeyDown(KeyCode.G))
+    public IEnumerator InsertHeart()
+    {
+        Debug.LogWarning("HEART HAS BEEN INSERTED");
+        Transition(HeartTarget, 0.5f);
+        yield return new WaitForSeconds(1.5f);
+        Transition(HeartReturn, 0.5f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 9)
         {
-            Transition(HeartReturn, 1f);
+            Debug.Log("Something entered the trigger");
+            if (other.CompareTag("Heart"))
+            {
+                Debug.Log("Heart is inside");
+                HeartActivated = true;
+                StartCoroutine(InsertHeart());
+
+                Destroy(other.gameObject);
+            }
         }
+        
     }
 
     /// <summary>
