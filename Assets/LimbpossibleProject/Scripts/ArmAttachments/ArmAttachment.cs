@@ -14,7 +14,7 @@ public class ArmAttachment : VRTK_InteractableObject {
     public AudioClip SoundOnAttach;
     public AudioClip SoundOnDetach;
 
-    float detachLaunchSpeed = 750f;
+    float detachLaunchSpeed = 600f;
 
     protected AudioSource audioSourceReference;
     
