@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 114686047535939180}
   - component: {fileID: 114067361506856284}
   - component: {fileID: 114488890145746922}
+  - component: {fileID: 82014935621726516}
   m_Layer: 0
   m_Name: ArmHammer
   m_TagString: ArmAttachment
@@ -117,16 +118,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1762312131018892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3787, y: 1.3526, z: -0.111}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0.2695757, y: 0.09941392, z: -0.44696748, w: 0.84715164}
+  m_LocalPosition: {x: 1.013, y: 0.834, z: -0.025}
+  m_LocalScale: {x: 0.005, y: 0.005000001, z: 0.005000001}
   m_Children:
   - {fileID: 4701251009699630}
   - {fileID: 4256431357000786}
   - {fileID: 4224362596024778}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.585001, y: 26.123001, z: -60.698}
 --- !u!4 &4701251009699630
 Transform:
   m_ObjectHideFlags: 1
@@ -308,6 +309,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 39.3287, y: 8.9437, z: 16.8914}
   m_Center: {x: -0.099580765, y: 0.0021500587, z: 57.7567}
+--- !u!82 &82014935621726516
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762312131018892}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114067361506856284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +457,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  SoundOnAttach: {fileID: 8300000, guid: 2830d67299827ae44b3c4f0aeaba7141, type: 3}
+  SoundOnDetach: {fileID: 8300000, guid: ec2abb872958dc64794efc0c138f8ddf, type: 3}
 --- !u!135 &135626192556569760
 SphereCollider:
   m_ObjectHideFlags: 1

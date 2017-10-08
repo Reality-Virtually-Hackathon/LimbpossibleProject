@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoalManager : MonoBehaviour {
+public class GoalManager : Singleton<GoalManager> {
 
     public bool IsGoalActive = false;
 
@@ -19,7 +19,7 @@ public class GoalManager : MonoBehaviour {
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.RightShift))
         {
             if(!IsGoalActive)
             {

@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 114846768637160048}
   - component: {fileID: 114475699675482578}
   - component: {fileID: 114366027110304070}
+  - component: {fileID: 82637962077333942}
   m_Layer: 0
   m_Name: ArmChair
   m_TagString: Untagged
@@ -441,8 +442,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549110849705566}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.195, y: 0.502, z: 1.247}
+  m_LocalRotation: {x: 0.40696442, y: 0.32676554, z: -0.8381101, w: 0.15866883}
+  m_LocalPosition: {x: -2.11, y: 0.567, z: -0.407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4484585876189642}
@@ -1802,6 +1803,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.490664, y: 9.330254, z: 0.7784591}
   m_Center: {x: -3.478553, y: 15.532402, z: -7.2341614}
+--- !u!82 &82637962077333942
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549110849705566}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114366027110304070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1870,6 +1951,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  SoundOnAttach: {fileID: 8300000, guid: 2830d67299827ae44b3c4f0aeaba7141, type: 3}
+  SoundOnDetach: {fileID: 8300000, guid: ec2abb872958dc64794efc0c138f8ddf, type: 3}
 --- !u!135 &135296242140114738
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33051931482819330}
   - component: {fileID: 23960242552177020}
   - component: {fileID: 65270109379530690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: combat_knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33333486320428738}
   - component: {fileID: 135567811405828902}
   - component: {fileID: 23046685175239352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArmJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,8 @@ GameObject:
   - component: {fileID: 114472153135580990}
   - component: {fileID: 114799286353679950}
   - component: {fileID: 114342670450247902}
-  m_Layer: 0
+  - component: {fileID: 82177510344260682}
+  m_Layer: 9
   m_Name: ArmSpinnyBlade
   m_TagString: ArmAttachment
   m_Icon: {fileID: 0}
@@ -78,7 +79,7 @@ GameObject:
   - component: {fileID: 33876607669623008}
   - component: {fileID: 23271165731586118}
   - component: {fileID: 65569919700584354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: combat_knife (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4620204185798402}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +112,7 @@ GameObject:
   - component: {fileID: 33054703052038684}
   - component: {fileID: 23167576387390120}
   - component: {fileID: 65738684239721704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: combat_knife (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,8 +164,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354216535102164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 1.317, z: -0.3972}
+  m_LocalRotation: {x: -0.16086763, y: 0.68856496, z: 0.16086763, w: 0.68856496}
+  m_LocalPosition: {x: -2.744, y: 1.065, z: -0.95594287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4093011552880150}
@@ -172,7 +173,7 @@ Transform:
   - {fileID: 4089527124380098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -26.3, y: 90, z: 0}
 --- !u!4 &4620204185798402
 Transform:
   m_ObjectHideFlags: 1
@@ -420,6 +421,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35.389084, y: 6.1265426, z: 2.67455}
   m_Center: {x: 5.5975943, y: 0.00000035762795, z: 0.000015258789}
+--- !u!82 &82177510344260682
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354216535102164}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114342670450247902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -471,6 +552,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  SoundOnAttach: {fileID: 8300000, guid: 2830d67299827ae44b3c4f0aeaba7141, type: 3}
+  SoundOnDetach: {fileID: 8300000, guid: ec2abb872958dc64794efc0c138f8ddf, type: 3}
 --- !u!114 &114799286353679950
 MonoBehaviour:
   m_ObjectHideFlags: 1
