@@ -37,7 +37,6 @@ public class RadioArmAttachment : MonoBehaviour {
         CurrentTrack++;
         audioSourceReference.clip = LevelSongs[CurrentTrack];
         audioSourceReference.Play();
-
         if(CurrentTrack == LevelSongs.Count - 1)
         {
             CurrentTrack = -1;
