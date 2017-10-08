@@ -16,7 +16,7 @@ public class ArmAttachment : VRTK_InteractableObject {
 
     float detachLaunchSpeed = 500f;
 
-    private AudioSource audioSourceReference;
+    protected AudioSource audioSourceReference;
     
     protected void Start() {
         audioSourceReference = GetComponent<AudioSource>();
@@ -30,8 +30,10 @@ public class ArmAttachment : VRTK_InteractableObject {
     public override void OnInteractableObjectGrabbed(InteractableObjectEventArgs e) {
         base.OnInteractableObjectGrabbed(e);
         eventsOnAttach.Invoke();
-        audioSourceReference.clip = SoundOnAttach;
-        audioSourceReference.Play();
+        if(SoundOnAttach != null) {
+            audioSourceReference.clip = SoundOnAttach;
+            audioSourceReference.Play();
+        }
     }
 
     public override void OnInteractableObjectUngrabbed(InteractableObjectEventArgs e) {
@@ -39,8 +41,10 @@ public class ArmAttachment : VRTK_InteractableObject {
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * detachLaunchSpeed);
         eventsOnDetach.Invoke();
-        audioSourceReference.clip = SoundOnDetach;
-        audioSourceReference.Play();
+        if(SoundOnDetach != null) {
+            audioSourceReference.clip = SoundOnDetach;
+            audioSourceReference.Play();
+        }
     }
 
     public override void StartUsing(VRTK_InteractUse usingObject) {

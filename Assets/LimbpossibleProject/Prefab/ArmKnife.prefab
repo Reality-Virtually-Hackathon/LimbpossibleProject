@@ -276,6 +276,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  SoundOnAttach: {fileID: 0}
+  SoundOnDetach: {fileID: 0}
 --- !u!114 &114853493675439094
 MonoBehaviour:
   m_ObjectHideFlags: 1
