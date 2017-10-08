@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Box519Mat
-  m_Shader: {fileID: 4800000, guid: d8dc5b44f974a407888d976711c36e82, type: 3}
+  m_Shader: {fileID: 4800000, guid: eca95c8fc2f575a4ea67668008e98082, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

@@ -5,12 +5,16 @@ using VRTK;
 
 public class ArmHand : ArmAttachment {
 
+    public HandGrab HandGrabReference;
 
     public AudioClip SoundOnFist;
     public AudioClip SoundOnRelaxed;
 
     GameObject relaxed;
     GameObject fist;
+
+    public bool HasObjectInsideOfTrigger = false;
+    public GameObject GameObjectInsideOfTrigger;
 
     protected void Start() {
         base.Start();
@@ -30,6 +34,11 @@ public class ArmHand : ArmAttachment {
             audioSourceReference.clip = SoundOnFist;
             audioSourceReference.Play();
         }
+
+        if (HasObjectInsideOfTrigger)
+        {
+            HandGrabReference.GrabObject(GameObjectInsideOfTrigger);
+        }
     }
 
     public override void StopUsing(VRTK_InteractUse usingObject) {
@@ -40,6 +49,45 @@ public class ArmHand : ArmAttachment {
             audioSourceReference.clip = SoundOnRelaxed;
             audioSourceReference.Play();
         }
+
+        HandGrabReference.ReleaseObject();
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 9)
+        {
+            Debug.Log("ENTERED TRIGGER");
+            HasObjectInsideOfTrigger = true;
+            GameObjectInsideOfTrigger = other.gameObject;
+        }
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == 9)
+
+        {
+            HasObjectInsideOfTrigger = true;
+            GameObjectInsideOfTrigger = other.gameObject;
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 9)
+        {
+            HasObjectInsideOfTrigger = false;
+            GameObjectInsideOfTrigger = null;
+
+        }
+
+
+        Debug.Log("EXITED TRIGGER");
+
     }
 
 }

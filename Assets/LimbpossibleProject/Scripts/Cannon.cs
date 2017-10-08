@@ -7,7 +7,6 @@ public class Cannon : MonoBehaviour {
 
     [Header("Basic References")]
     public GameObject CannonBall;
-    public GameObject FireEffect;
     public Transform FireLocation;
     [Space(5)]
     [Header("Configurable Attributes")]
@@ -36,8 +35,7 @@ public class Cannon : MonoBehaviour {
             {
                 audioSourceReference.clip = CannonShoot;
                 audioSourceReference.Play();
-
-                Instantiate(FireEffect, FireLocation.position, Quaternion.identity);
+                
                 GameObject tempCannonBall = Instantiate(CannonBall, FireLocation.position, Quaternion.identity);
                 tempCannonBall.transform.localEulerAngles = new Vector3(0f, 90f, 0f);
 

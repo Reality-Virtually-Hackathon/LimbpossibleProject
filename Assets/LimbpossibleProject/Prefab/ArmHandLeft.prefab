@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 82361685630490800}
   - component: {fileID: 114203965671399030}
   - component: {fileID: 114605594715093758}
+  - component: {fileID: 114047754200829770}
   m_Layer: 9
   m_Name: ArmHandLeft
-  m_TagString: ArmAttachment
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,9 +150,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047500868793324}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.073, y: 1.503, z: 0.086}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.07415594, y: 0.71004695, z: 0.04213354, w: 0.69896996}
+  m_LocalPosition: {x: 0.23672071, y: 0.28673244, z: 0.26425886}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000007}
   m_Children:
   - {fileID: 4624141573882476}
   - {fileID: 4672135652287396}
@@ -476,6 +477,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114047754200829770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047500868793324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66c689f9ff38584bbf8459783a5c31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrabbedObject: {fileID: 0}
+  RigidbodyReference: {fileID: 54293010281396078}
 --- !u!114 &114203965671399030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -544,10 +558,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  SoundOnAttach: {fileID: 0}
-  SoundOnDetach: {fileID: 0}
+  SoundOnAttach: {fileID: 8300000, guid: 2830d67299827ae44b3c4f0aeaba7141, type: 3}
+  SoundOnDetach: {fileID: 8300000, guid: ec2abb872958dc64794efc0c138f8ddf, type: 3}
+  HandGrabReference: {fileID: 114047754200829770}
   SoundOnFist: {fileID: 8300000, guid: bf61906707acd3742b47d8c222f07735, type: 3}
   SoundOnRelaxed: {fileID: 8300000, guid: 10ec6d08475a3cd489543505bdd51acd, type: 3}
+  HasObjectInsideOfTrigger: 0
+  GameObjectInsideOfTrigger: {fileID: 0}
 --- !u!135 &135276114398586728
 SphereCollider:
   m_ObjectHideFlags: 1

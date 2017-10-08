@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067aa0aff5255454abd9ee97420a39bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 101464, guid: e0d10654428eb644d9a84735f8934b38, type: 2}
+  Explosion: {fileID: 100006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
   HittingBladeSparks: {fileID: 116018, guid: 19f80fb5af23e694d850192826a36238, type: 2}
   SpinningBladeHitClip: {fileID: 8300000, guid: 96c1a87b5816ac24ea3ca5d1e1b18ce0,
     type: 3}
