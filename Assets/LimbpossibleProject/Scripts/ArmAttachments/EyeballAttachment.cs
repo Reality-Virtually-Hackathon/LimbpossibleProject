@@ -10,11 +10,9 @@ public class EyeballAttachment : ArmAttachment {
 
     Camera eyeCam;
     RenderTexture renderTexture;
-    //VRTK_TransformFollow follower;
 
     protected void Start() {
         base.Start();
-        //follower = GetComponent<VRTK_TransformFollow>();
         eyeCam = transform.Find("EyeCam").GetComponent<Camera>();
     }
 
@@ -30,12 +28,18 @@ public class EyeballAttachment : ArmAttachment {
         if (launchesEye) {
             rb.isKinematic = false;
             rb.useGravity = true;
-        } else {
-            //Destroy(rb);
-            //follower.followsRotation = true;
         }
-
         base.OnInteractableObjectUngrabbed(e);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "Web") {
+            Rigidbody rb = this.GetComponent<Rigidbody>();
+            rb.useGravity = false;
+            WebObjectCatcher web = other.GetComponent<WebObjectCatcher>();
+            this.transform.LookAt(web.pointingTowards.transform);
+            rb.isKinematic = true;
+        }
     }
 
 }

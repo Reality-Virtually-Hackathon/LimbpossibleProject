@@ -13,9 +13,9 @@ public class FacePlayer : MonoBehaviour
     {
         if (Target == null)
         {
-            Target = Camera.main.transform;
+            Target = GameObject.Find("Headset") ? GameObject.Find("Headset").transform : null;
         }
-        else
+        else if(transform != null)
         {
             transform.LookAt(Target.position);
         }

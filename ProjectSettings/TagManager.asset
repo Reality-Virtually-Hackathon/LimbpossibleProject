@@ -16,6 +16,7 @@ TagManager:
   - Torso
   - OtherSaucers
   - ArmAttachment
+  - Web
   layers:
   - Default
   - TransparentFX
